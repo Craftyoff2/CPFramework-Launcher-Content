@@ -1,24 +1,35 @@
 [
   {
-    "id": "07a98613-68c3-4497-8607-e08931da1bbd",
-    "title": "sdadsadasdsa",
-    "slug": "article-17949ddasda42561614",
-    "category": "Announcement",
-    "excerpt": "asdadasdas",
-    "content": "daedad",
-    "featured": false,
+    "id": "launcher-welcome",
+    "title": "Welcome to CPFramework Launcher",
+    "slug": "welcome-to-cpframework-launcher",
+    "category": "Launcher",
+    "excerpt": "Your games, studio updates, and account in one place.",
+    "content": "CPFramework Launcher brings together the game catalog, studio updates, and connected account features.\n\nThis first version brings together the game catalog, launcher news, and account connections. We will keep improving the experience as the studio and its projects grow.",
+    "featured": true,
     "published": true,
-    "publishedAt": "2026-11-17T19:09:44.377Z"
+    "publishedAt": "2026-09-14T12:00:00.000Z"
   },
   {
-    "id": "f45dce8c-b31d-4427-b2ff-7a89b222a339",
-    "title": "Article Test",
-    "slug": "article-1794941774278",
-    "category": "Other",
-    "excerpt": "",
-    "content": "",
+    "id": "guardians-hill-update",
+    "title": "Inside the world of Strážce Kopce",
+    "slug": "inside-the-world-of-strazce-kopce",
+    "category": "Development Update",
+    "excerpt": "A look at the atmosphere, details, and stories behind the hill.",
+    "content": "Strážce Kopce is built around a place that feels familiar at first, then increasingly uncertain. Its atmosphere comes from the landscape, the small details along the way, and the stories hinted at rather than explained.\n\nWe are continuing to shape the world and its presentation. More development news will be shared here as the project progresses.",
     "featured": false,
     "published": true,
-    "publishedAt": "2026-11-17T18:56:20.464Z"
+    "publishedAt": "2026-09-08T12:00:00.000Z"
+  },
+  {
+    "id": "studio-what-next",
+    "title": "What comes next",
+    "slug": "what-comes-next",
+    "category": "Studio",
+    "excerpt": "New projects, the same love for unforgettable experiences.",
+    "content": "The studio is working on new ideas and experiences while continuing to build on the worlds already in progress.\n\nThe launcher brings studio announcements and project updates together, so there is one easy place to follow what comes next.",
+    "featured": false,
+    "published": true,
+    "publishedAt": "2026-08-29T12:00:00.000Z"
   }
 ]
