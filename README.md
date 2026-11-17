@@ -1,20 +1,38 @@
-# CPFramework Launcher Content
+# CPFramework Launcher – Content Repository
 
-**The centralized content repository powering CPFramework Launcher.**
+Centralized content repository for **CPFramework Launcher**, developed by **Crafty Productions**.
 
-This repository provides structured content for the CPFramework Launcher, including launcher news, game information, studio announcements, and social content.
+This repository stores the content displayed inside CPFramework Launcher, including news articles, game information, social content and associated media assets.
 
-Content is managed through a custom application developed for the Crafty Productions ecosystem. Instead of manually editing JSON files or updating the launcher itself, administrators can create and manage publications through the application, which automatically synchronizes the changes with this repository.
+Content is managed through a custom desktop application and published to GitHub, allowing the launcher to retrieve updated information without requiring a new launcher release.
 
-The launcher retrieves the latest content and uses it to populate its interface.
+---
+
+## Overview
+
+The repository acts as the online content source for CPFramework Launcher.
+
+Instead of manually editing files on GitHub, content is managed through a dedicated desktop application developed by Crafty Productions.
+
+The application handles content creation, editing and publishing. Git integration synchronizes the local repository with GitHub, where the launcher can retrieve the published content.
+
+### Main Features
+
+- **News System** – Publish launcher announcements, studio updates and articles.
+- **Game Information** – Store information about games developed or published by Crafty Productions.
+- **Social Content** – Manage content intended for the launcher's social section.
+- **Image Management** – Manage and publish images associated with content.
+- **Automatic Publishing** – Synchronize changes from the desktop application to GitHub.
+- **Centralized Content** – Keep launcher information organized in one repository.
 
 ---
 
 ## Repository Structure
 
+Current repository structure:
+
 ```text
 CPFramework-Launcher-Content/
-│
 └── content/
     ├── manifest.json
     ├── news.json
@@ -22,104 +40,165 @@ CPFramework-Launcher-Content/
     └── social.json
 ```
 
-### Content Files
+### File Descriptions
 
 | File | Description |
 |---|---|
-| `manifest.json` | Repository manifest containing schema information, update timestamps, and available content files. |
-| `news.json` | News articles, announcements, development updates, and studio publications. |
-| `games.json` | Game catalog information used by the launcher. |
-| `social.json` | Social content and related publications. |
+| `manifest.json` | Contains repository metadata and the list of content files. |
+| `news.json` | Stores news articles and announcements. |
+| `games.json` | Stores game-related information. |
+| `social.json` | Stores content for the social section. |
+
+Additional media assets, such as article images, can be published and managed through the desktop Content Manager when needed.
 
 ---
 
 ## News System
 
-The news system supports structured articles with the following properties:
+The `news.json` file stores the articles displayed in CPFramework Launcher.
 
-- **ID** – Unique identifier for each article.
-- **Title** – Article headline.
-- **Slug** – URL-friendly article identifier.
-- **Category** – Article classification.
-- **Excerpt** – Short article description.
-- **Content** – Full article content.
-- **Featured** – Determines whether an article is highlighted.
-- **Published** – Controls publication visibility.
-- **Published At** – Publication date and time.
+Each news article can contain information such as:
 
-This structure allows the launcher to organize, display, and filter publications without requiring application updates.
+| Property | Description |
+|---|---|
+| `id` | Unique article identifier. |
+| `title` | Article title. |
+| `slug` | URL-friendly article identifier. |
+| `category` | Article category. |
+| `excerpt` | Short article description. |
+| `content` | Main article content. |
+| `featured` | Indicates whether the article is featured. |
+| `published` | Determines whether the article is published. |
+| `publishedAt` | Publication date and time. |
+
+Articles can be created, edited and published through the custom desktop application.
+
+Images associated with articles can also be managed through the application.
 
 ---
 
 ## Manifest System
 
-The `manifest.json` file acts as the central index for the repository.
+The `manifest.json` file provides metadata about the content repository.
 
-It contains:
+It currently contains:
 
 - `schemaVersion` – Version of the content structure.
-- `updatedAt` – Timestamp of the latest repository content update.
-- `files` – List of available content files.
+- `updatedAt` – Timestamp of the latest manifest update.
+- `files` – List of content files available in the repository.
 
-The launcher can use the manifest to identify available content sources and determine when the repository was last updated.
+The manifest helps identify the available content files and their structure.
 
 ---
 
 ## Publishing Workflow
 
-All content is intended to be managed through the custom CPFramework Content Manager application.
+Content is managed locally and then published to GitHub.
 
-The publishing workflow:
+The general workflow is:
 
-1. Create a new article or content entry.
-2. Configure its title, category, description, and content.
-3. Configure additional publication properties.
-4. Publish the content through the application.
-5. The application automatically updates the appropriate repository files.
-6. CPFramework Launcher retrieves the updated content.
+```text
+┌──────────────────────────────┐
+│      Desktop Content Manager │
+│                              │
+│  Create and edit content     │
+│  Manage articles and images  │
+│  Update games and social     │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        Git Integration       │
+│                              │
+│  Commit local changes        │
+│  Push changes to GitHub      │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│       GitHub Repository      │
+│                              │
+│  Stores published content   │
+│  and associated assets       │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│      CPFramework Launcher   │
+│                              │
+│  Retrieves published data   │
+│  Displays updated content   │
+└──────────────────────────────┘
+```
 
-This eliminates the need for manual repository editing during normal content management.
+### Publishing Steps
+
+1. Create or edit content in the desktop Content Manager.
+2. The application updates the appropriate content files.
+3. Images and other associated assets are managed when included.
+4. Git integration commits and uploads the changes to GitHub.
+5. CPFramework Launcher retrieves the published content.
+6. Users can see the latest available information inside the launcher.
+
+The exact Git workflow depends on the implementation of the desktop application.
 
 ---
 
-## Integration
+## Project Components
 
-This repository is designed to operate independently from the launcher application.
-
-**CPFramework Content Manager**
-- Creates and manages content.
-- Handles publishing and repository synchronization.
-- Maintains content metadata.
-
-**CPFramework-Launcher-Content**
-- Stores structured content.
-- Provides a centralized source for launcher data.
-- Maintains the content manifest.
-
-**CPFramework Launcher**
-- Retrieves repository content.
-- Displays news and announcements.
-- Presents game catalog information.
-- Integrates available social content.
+| Component | Responsibility |
+|---|---|
+| **Desktop Content Manager** | Creates, edits and manages content locally. |
+| **Git / GitHub** | Synchronizes and stores published content. |
+| **Content Repository** | Acts as the centralized online content source. |
+| **CPFramework Launcher** | Retrieves and displays the published content. |
 
 ---
 
-## Design Principles
+## Technologies & Languages
 
-- **Centralization** – One repository for launcher content.
-- **Automation** – Content publishing without manual JSON editing.
-- **Separation** – Content management remains independent of the launcher.
-- **Scalability** – New content types and properties can be introduced as the ecosystem grows.
-- **Maintainability** – Structured JSON makes content easy to manage and consume.
+Technologies, programming languages, formats and development platforms used or explored across Crafty Productions projects.
+
+### Programming Languages
+
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+
+### Web Development
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![TSX](https://img.shields.io/badge/TSX-3178C6?style=for-the-badge&logo=react&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
+
+### Data & Configuration
+
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+![XML](https://img.shields.io/badge/XML-FF6600?style=for-the-badge&logo=xml&logoColor=white)
+![YAML](https://img.shields.io/badge/YAML-CB171E?style=for-the-badge&logo=yaml&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+
+### Development Tools & Platforms
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Unreal Engine](https://img.shields.io/badge/Unreal_Engine-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)
+![NeoForge](https://img.shields.io/badge/NeoForge-FF6600?style=for-the-badge&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)
 
 ---
 
-## Part of Crafty Productions
+## About Crafty Productions
 
-CPFramework Launcher Content is part of the Crafty Productions software ecosystem.
+**Crafty Productions** is an independent development studio focused on creating video games, software, tools and digital experiences.
 
-It serves as the content infrastructure behind CPFramework Launcher, helping connect studio publications, game information, and announcements in one centralized location.
+This repository is part of the CPFramework ecosystem and supports the content delivery system used by CPFramework Launcher.
 
-**Crafty Productions**  
-*Building tools, experiences, and games.*
+---
 
+<sub>Developed and maintained by Crafty Productions.</sub>
+
+**Crafty Productions** – Building projects, creating tools and developing games.
