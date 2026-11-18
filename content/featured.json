@@ -1,5 +1,21 @@
 [
   {
+    "id": "346c2df9-d4f1-44f8-9356-105c4c52ee13",
+    "title": "Featured gamess",
+    "category": "Featured Software",
+    "description": "can you go a little fix? or expension of the app? seperate it for two categories (for now) one category is Svářečák, and second Řidičáky, for Svářečák, when clicking on it, there will be two more categories, and that is MMA (Elektroda) and MAG (CO2) and for that, for mma is all the question we have currently, and for mag, i will send you the question in a while, but some questions should be same (mainly bezpečnotsní) that should be the ones with number 135, other questions i will send you later, for řidičák, i dontk know if there are seperently different questions, but ther will be inside three categories, Ridičák B (Auto), Řidičák C (Kamion), Řidičák T (traktor), but řidičak will be for now Coming Soon...",
+    "actionLabel": "LEARN MORE",
+    "actionUrl": "",
+    "slides": [
+      "assets/news/1795012575138-52245f.jpg",
+      "assets/news/1795012578088-esyhgp.jpg",
+      "assets/news/1795012580902-5d9kl4.jpg"
+    ],
+    "published": true,
+    "archived": false,
+    "updatedAt": "2026-11-18T14:37:03.454Z"
+  },
+  {
     "id": "guardians-hill-featured",
     "title": "Strážce Kopce",
     "category": "Featured Game",
