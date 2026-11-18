@@ -1,31 +1,21 @@
 [
   {
-    "id": "346c2df9-d4f1-44f8-9356-105c4c52ee13",
-    "title": "Featured gamess",
-    "category": "Featured Software",
-    "description": "can you go a little fix? or expension of the app? seperate it for two categories (for now) one category is Svářečák, and second Řidičáky, for Svářečák, when clicking on it, there will be two more categories, and that is MMA (Elektroda) and MAG (CO2) and for that, for mma is all the question we have currently, and for mag, i will send you the question in a while, but some questions should be same (mainly bezpečnotsní) that should be the ones with number 135, other questions i will send you later, for řidičák, i dontk know if there are seperently different questions, but ther will be inside three categories, Ridičák B (Auto), Řidičák C (Kamion), Řidičák T (traktor), but řidičak will be for now Coming Soon...",
-    "actionLabel": "LEARN MORE",
-    "actionUrl": "",
-    "slides": [
-      "assets/news/1795012575138-52245f.jpg",
-      "assets/news/1795012578088-esyhgp.jpg",
-      "assets/news/1795012580902-5d9kl4.jpg"
-    ],
-    "published": true,
-    "archived": false,
-    "updatedAt": "2026-11-18T15:02:57.486Z",
-    "banner": "assets/news/1795014177484-4b5327.gif"
-  },
-  {
     "id": "guardians-hill-featured",
     "title": "Strážce Kopce",
     "category": "Featured Game",
     "description": "An atmospheric journey through a place that should have remained forgotten.",
     "actionLabel": "PLAY NOW",
     "actionUrl": "steam://run/4468890",
-    "slides": [],
-    "published": false,
+    "slides": [
+      "assets/news/1795014657251-joj4d2.jpg",
+      "assets/news/1795014659765-ef0oq6.jpg",
+      "assets/news/1795014662784-0ivfdg.jpg",
+      "assets/news/1795014666706-vhw36q.jpg",
+      "assets/news/1795014668756-oq305f.jpg"
+    ],
+    "published": true,
     "archived": false,
-    "updatedAt": "2026-11-18T14:40:47.989Z"
+    "updatedAt": "2026-11-18T15:11:08.760Z",
+    "banner": "assets/news/1795014452604-l5787h.png"
   }
 ]
