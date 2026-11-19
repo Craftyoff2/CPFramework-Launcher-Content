@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "guardians-hill",
+    "name": "Strážce Kopce",
+    "slug": "guardians-hill",
+    "tagline": "The hill remembers.",
+    "description": "An atmospheric journey through a place that should have remained forgotten.",
+    "steamAppId": 4468890,
+    "stores": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/4468890/"
+      }
+    ],
+    "enabled": true,
+    "itemType": "Game",
+    "tags": [
+      "Adventure",
+      "Atmospheric"
+    ]
+  },
+  {
+    "id": "project-nova",
+    "name": "Project Nova",
+    "slug": "project-nova",
+    "tagline": "In development",
+    "description": "A new experience is taking shape.",
+    "steamAppId": null,
+    "stores": [],
+    "enabled": true,
+    "itemType": "Game",
+    "tags": [
+      "In development"
+    ]
+  },
+  {
+    "id": "clicense",
+    "name": "CLicense",
+    "slug": "clicense",
+    "tagline": "License management software.",
+    "description": "Install CLicense directly into your CPFramework Library.",
+    "steamAppId": null,
+    "stores": [],
+    "enabled": true,
+    "itemType": "Software",
+    "tags": [
+      "License",
+      "Utility"
+    ],
+    "installer": {
+      "url": "https://www.dropbox.com/scl/fi/s58ybc6ms2o92qfv6al2h/CLicense.zip?rlkey=yy03j04vigo757ixn0brqo4mu&st=igjknghj&dl=1",
+      "executable": "CLicense.exe",
+      "folderName": "CLicense",
+      "sizeBytes": 171015801
+    },
+    "image": "assets/news/1795106977139-c90ojb.png"
+  }
+]
